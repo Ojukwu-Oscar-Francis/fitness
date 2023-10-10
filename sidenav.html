@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sidenav.css">
+    <title>Shopping Site</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="" class="logo">E-commerce</a>
+        </div>
+        <div>
+            <i class="fa fa-shopping-cart" id="cart-icon" onclick="openNav()"></i>
+        </div>
+    </nav>
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <img src="img/pexels-leon-ardho-1552249.jpg" alt="">
+            <p>Fruit</p>
+            <p>$400</p>
+        </div>
+        <button>Buy Now</button>
+        <i id="close-cart">&times;</i>
+    </div>
+</body>
+<script src="boot5/js/all.js"></script>
+<script src="boot5/js/jquery-3.2.1.min.js"></script>
+<script>
+    // cart
+    let cart = document.querySelector('.cart')
+    let closecart = document.querySelector('#close-cart')
+
+    // open cart
+    function openNav(){
+        cart.classList.add('active')
+    }
+
+    // close cart
+    closecart.onclick = () => {
+        cart.classList.remove('active')
+    }
+</script>
+</html>
